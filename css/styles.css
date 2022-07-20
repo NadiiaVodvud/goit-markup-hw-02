@@ -4,15 +4,30 @@
   --secondary-text-color: #757575;
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+  --main-background-color: #E5E5E5;
+  --secondary-background-color: #F5F4FA;
+  --dark-bacground-color: #2F303A;
 }
 
 body {
   font-family: var(--main-font);
-  background-color: rgb(246, 244, 243);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
 }
-a {
-  text-decoration: none;
+/* site nav */
+.site-nav .link{
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
 }
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+/* logo */
 .logo {
   font-family: var(--secondary-font)
   font-weight: 700;
@@ -27,46 +42,154 @@ a {
 .logo-white {
   color: #ffffff;
 }
-.site-naw link {
-  font-family: 'Roboto';
+.current {
+  color: var(--accent-color);
+}
+
+/* Contacts */
+.contacts .link{
+  font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--secondary-text-color);
 }
-.site-naw link:hover,
-.site-naw link:focus {
-  color: var(--accent-color);
+  .list, .link {
+  list-style: none;
 }
-
-h1 {
-  font-family: 'Roboto';
-  font-style: normal;
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);}
+  
+/* main */
+.main-title {
+  font-family: var(--main-font);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* or 136% */
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: #ffffff;
-
   border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.list,
-.link {
-  list-style: none;
+/* Button */
+.button{
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background-color: var(--accent-color);
+
 }
-/* універсальні сеоектори */
+.main-hero{
+  background-color: var(--dark-bacground-color);
+}
+/* Features section*/
+.title-list{
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.features-title{
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color:var(--main-text-color);
+}
+.features-description{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color:var(--secondary-text-color);
+  }
+/* Team section */
 .team-section {
+  background-color: var(--secondary-background-color);
+}
+.team{
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.team-position{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+/* Footer section*/
+footer{
+  background-color: var(--dark-bacground-color);
+}
+.address{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+.footer-contacts{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Page Portfolio special*/
+.buttons{
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.buttons :hover,
+.buttons :focus{
+  color: #FFFFFF;
   background-color: var(--accent-color);
 }
-.buttons{
-    font-family: var(--main-font);
+.projects-title{
+font-family: var(--main-font);
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color:var(--main-text-color);
 }
-.current {
-    color: var(--accent-color);
+.progects-description{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
