@@ -1,23 +1,18 @@
-/* todo 1) Як забрати курсив в адресі (футер) якщо a {list-style: none;} -не спрацьовує ?*/
-/* todo 2) Чи потрібно в цій дз щось робити з картинками? (розміщення) */
-/* todo 3) Не розумію чому не спрацьовує ховер на кнопках на сторінці портфоліо, їх потрібно зробити посиланнями? */
-/* todo 4) Чи потрібно групувати однотипний контент щоб зменшити кількість коду css на даному етапі? Наприклад: .site-nav .link,.contacts .link { font-family: var(--main-font)} ;font-weight: 500; Чи підходить такий варіант як зараз вже є?*/
-/* todo 5) Які очевидні для Вас (і невидимі для мене) є помилки в даній роботі */
 :root {
   --accent-color: #2196f3;
   --main-text-color: #212121;
   --secondary-text-color: #757575;
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
-  --main-background-color: #E5E5E5;
-  --secondary-background-color: #F5F4FA;
-  --dark-bacground-color: #2F303A;
+  --main-background-color: #FFFFFF;
+  --secondary-background-color: #EEEEEE;
+  --dark-background-color:#2F303A;
 }
 
 body {
   font-family: var(--main-font);
-  background-color: var(--main-background-color);
   color: var(--main-text-color);
+  background-color: var(--main-background-color);
 }
 a {
   list-style: none;
@@ -42,6 +37,7 @@ a {
 /* logo */
 .logo {
   font-family: var(--secondary-font)
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.92;
@@ -66,12 +62,30 @@ a {
 }
   .list, .link {
   list-style: none;
+  text-decoration: none;
 }
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);}
   
 /* main */
+.main-hero{
+  background-color: var(dark-background-color)
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .main-title {
   font-family: var(--main-font);
   font-weight: 900;
@@ -98,11 +112,8 @@ a {
   background-color: var(--accent-color);
 
 }
-.main-hero{
-  background-color: var(--dark-bacground-color);
-}
 /* Features section*/
-.title-list ї, .features-title{
+.title-list , .features-title{
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 36px;
@@ -120,9 +131,6 @@ a {
   color:var(--secondary-text-color);
   }
 /* Team section */
-.team-section {
-  background-color: var(--secondary-background-color);
-}
 .team{
   font-family: var(--main-font);
   font-weight: 500;
@@ -142,9 +150,6 @@ a {
   color: var(--secondary-text-color);
 }
 /* Footer section*/
-footer{
-  background-color: var(--dark-bacground-color);
-}
 .address, .footer-contacts{
   font-family: var(--main-font);
   font-weight: 400;
@@ -153,12 +158,12 @@ footer{
   letter-spacing: 0.03em;
 }
 .address{
-color: #FFFFFF;
+  color: #FFFFFF;
+  font-style: normal;
 }
 .footer-contacts{
   color: rgba(255, 255, 255, 0.6);
 }
-
 
 
 /* Page Portfolio special*/
@@ -171,8 +176,8 @@ color: #FFFFFF;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-.buttons :hover,
-.buttons :focus{
+.buttons:hover,
+.buttons:focus{
   color: #FFFFFF;
   background-color: var(--accent-color);
 }
